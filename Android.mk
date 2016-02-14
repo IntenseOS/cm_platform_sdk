@@ -193,7 +193,7 @@ cmplat_docs_java_libraries := \
 cmplat_docs_SDK_VERSION := 13.0
 
 # release version
-cmplat_docs_SDK_REL_ID := 4
+cmplat_docs_SDK_REL_ID := 5
 
 cmplat_docs_LOCAL_MODULE_CLASS := JAVA_LIBRARIES
 
@@ -224,8 +224,7 @@ LOCAL_DROIDDOC_OPTIONS:= \
         -exclude org.cyanogenmod.platform.internal \
         -api $(INTERNAL_CM_PLATFORM_API_FILE) \
         -removedApi $(INTERNAL_CM_PLATFORM_REMOVED_API_FILE) \
-        -nodocs \
-        -verbose
+        -nodocs
 
 LOCAL_UNINSTALLABLE_MODULE := true
 
@@ -256,8 +255,7 @@ LOCAL_DROIDDOC_OPTIONS:=\
         -exclude org.cyanogenmod.platform.internal \
         -api $(INTERNAL_CM_PLATFORM_SYSTEM_API_FILE) \
         -removedApi $(INTERNAL_CM_PLATFORM_SYSTEM_REMOVED_API_FILE) \
-        -nodocs \
-        -verbose
+        -nodocs
 
 LOCAL_DROIDDOC_CUSTOM_TEMPLATE_DIR:= build/tools/droiddoc/templates-sdk
 
@@ -301,7 +299,8 @@ LOCAL_DROIDDOC_OPTIONS := \
         -since $(CM_SRC_API_DIR)/1.txt 1 \
         -since $(CM_SRC_API_DIR)/2.txt 2 \
         -since $(CM_SRC_API_DIR)/3.txt 3 \
-        -since $(CM_SRC_API_DIR)/4.txt 4
+        -since $(CM_SRC_API_DIR)/4.txt 4 \
+        -since $(CM_SRC_API_DIR)/5.txt 5
 
 $(full_target): $(cm_framework_built) $(gen)
 include $(BUILD_DROIDDOC)
